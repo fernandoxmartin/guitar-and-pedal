@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed";
+}
+
+body {
+  overflow: hidden;
+}
+
+.body-container {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+header {
+  width: 20%;
+  height: 100vh;
+  background: rgb(240, 240, 240);
+  position: fixed;
+}
+/***************** SIDE NAV *************************/
+.logo {
+  width: 100%;
+}
+
+.logo img {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50vh;
+}
+
+ul {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed";
+  font-weight: bolder;
+}
+
+.left-nav a {
+  text-decoration: none;
+  transition: 0.2s ease;
+  color: #000000;
+}
+
+.left-nav a:hover {
+  font-size: 30px;
+  color: #004a7f;
+}
+
+.active-link {
+  font-size: 30px;
+  color: #005592;
+}
+
+.social {
+  font-size: 30px;
+  margin: 0 auto;
+  width: 50%;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social a {
+  color: #444444;
+  transition: 0.5s ease;
+}
+
+.social a:hover {
+  color: #004a7f;
+  transform: scale(1.2);
+}
+/***************** HOME *************************/
+main {
+  background: #dddddd;
+  height: 100vh;
+  width: 100%;
+  grid-column: 2/3;
+}
+
+.top-nav {
+  height: 10vh;
+  width: 100%;
+  background: transparent;
+  display: flex;
+}
+
+.top-nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #e0e0e0;
+}
+
+svg {
+  margin: 40px;
+  cursor: pointer;
+}
+
+svg text {
+  font-size: 22px;
+  color: white;
+}
+
+.cart {
+  font-size: 30px;
+  cursor: pointer;
+  text-shadow: 0px 0px 10px #000000;
+}
+
+.cart[data-count]:after {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 5%;
+  right: 7.7%;
+  content: attr(data-count);
+  background: #eb5757;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 12px;
+  font-family: "Montserrat";
+  font-weight: bolder;
+  text-align: center;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.one {
+  text-align: center;
+  background: url("./img/frontpage.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.center-frontpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+.center-frontpage h1 {
+  font-size: 80px;
+  color: white;
+  text-shadow: 5px 5px 10px #000000;
+}
+/***************** ITEMS SECTION *************************/
+.section {
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.two {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 114, 201, 0.3)
+    ),
+    url("./img/bg/guitar.jpeg");
+  background-size: cover;
+}
+
+.three {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 114, 201, 0.3)
+    ),
+    url("./img/bg/pedals.jpg");
+  background-size: cover;
+}
+
+.atc {
+  height: 30px;
+  width: 100px;
+  background: linear-gradient(to bottom, #003d69, #004a7f);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.shop-item {
+  font-size: 50px;
+  text-shadow: 2px 2px 5px #000000;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.item-footer {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+}
+
+.guitar,
+.pedal {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.guitar img {
+  width: 50%;
+}
+
+.pedal img {
+  width: 80%;
+}
+/***************** CONTACT SECTION *************************/
+.four {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 114, 201, 0.3)
+    ),
+    url("./img/bg/contact.jpg");
+  background-size: cover;
+}
+
+.center-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 100%;
+  font-size: 50px;
+  margin: 0 auto;
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+}
+
+.center-contact a {
+  color: #0075c9;
+}
+/***************** SHOPPING CART *************************/
+.shopping-cart {
+  height: 90vh;
+  width: 50%;
+  background: white;
+  position: absolute;
+  top: 10vh;
+  right: 0%;
+  transform: translateX(100%);
+  transition: 0.5s ease;
+  color: black;
+  overflow: hidden;
+}
+
+.shopping-cart h3 {
+  padding-top: 20px;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.exit-cart {
+  border: none;
+  background: #eb5757;
+  height: 50px;
+  width: 50px;
+  font-size: 40px;
+  font-family: "Montserrat";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.cart-rows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-quantity-input {
+  height: 20px;
+  width: 40px;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  margin-right: 25px;
+}
+
+.remove-button {
+  height: 20px;
+  width: 60px;
+  color: white;
+  background-color: #eb5757;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 20px;
+  margin-right: 90px;
+}
+
+.purchase {
+  height: 50px;
+  width: 150px;
+  margin: 40px auto 80px auto;
+  background: rgb(103, 221, 215);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*************************************************************/
