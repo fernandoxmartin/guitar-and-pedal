@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Guitar & Pedal</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Roboto+Condensed&display=swap"
       rel="stylesheet"
@@ -20,7 +21,8 @@
   </head>
   <body>
     <div class="body-container">
-      <header>
+      <header class="side-nav">
+        <i class="fas fa-times"></i>
         <div class="logo">
           <a href="#home"><img src="./img/logo.png"/></a>
         </div>
@@ -40,9 +42,12 @@
         </div>
       </header>
       <main>
-        <section class="section one" id="home">
-          <div class="top-nav">
-            <div class="top-nav-links">
+        <div class="top-nav">
+          <div class="top-nav-links">
+            <div class="top-nav-left">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="top-nav-right">
               <div class="cart-counter">
                 <i
                   class="cart fas fa-shopping-bag"
@@ -73,25 +78,29 @@
               </svg>
             </div>
           </div>
+        </div>
+
+        <div class="shopping-cart">
+          <button class="exit-cart" onclick="CloseShoppingCart()">X</button>
+          <h3>Shopping Cart</h3>
+          <div class="cart-rows">
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+          </div>
+          <div class="cart-items"></div>
+          <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">$0</span>
+          </div>
+          <div class="button">
+            <button class="purchase" type="button">PURCHASE</button>
+          </div>
+        </div>
+
+        <section class="section one" id="home">
           <div class="center-frontpage">
             <h1>Design Your Own Combination</h1>
-          </div>
-          <div class="shopping-cart">
-            <button class="exit-cart" onclick="CloseShoppingCart()">X</button>
-            <h3>Shopping Cart</h3>
-            <div class="cart-rows">
-              <span class="cart-item cart-header cart-column">ITEM</span>
-              <span class="cart-price cart-header cart-column">PRICE</span>
-              <span class="cart-quantity cart-header cart-column"
-                >QUANTITY</span
-              >
-            </div>
-            <div class="cart-items"></div>
-            <div class="cart-total">
-              <strong class="cart-total-title">Total</strong>
-              <span class="cart-total-price">$0</span>
-            </div>
-            <button class="purchase" type="button">PURCHASE</button>
           </div>
         </section>
 

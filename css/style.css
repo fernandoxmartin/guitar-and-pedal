@@ -36,6 +36,10 @@ nav {
   height: 50vh;
 }
 
+.side-nav i {
+  visibility: hidden;
+}
+
 ul {
   height: 50vh;
   display: flex;
@@ -76,6 +80,10 @@ ul {
   justify-content: space-around;
 }
 
+.social i {
+  visibility: visible;
+}
+
 .social a {
   color: #444444;
   transition: 0.5s ease;
@@ -88,28 +96,45 @@ ul {
 /***************** HOME *************************/
 main {
   background: #dddddd;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   grid-column: 2/3;
 }
 
 .top-nav {
   height: 10vh;
-  width: 100%;
-  background: transparent;
+  width: 80%;
+  background: rgba(250, 250, 250, 0.2);
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  margin: 0 auto;
 }
 
 .top-nav-links {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.top-nav-left {
+  font-size: 30px;
+  display: flex;
   align-items: center;
-  color: #e0e0e0;
+  visibility: hidden;
+}
+
+.top-nav-right {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 svg {
-  margin: 40px;
   cursor: pointer;
 }
 
@@ -119,6 +144,7 @@ svg text {
 }
 
 .cart {
+  color: #ffffff;
   font-size: 30px;
   cursor: pointer;
   text-shadow: 0px 0px 10px #000000;
@@ -128,8 +154,8 @@ svg text {
   position: absolute;
   height: 20px;
   width: 20px;
-  top: 5%;
-  right: 7.7%;
+  top: 50%;
+  right: 11.5%;
   content: attr(data-count);
   background: #eb5757;
   border: 1px solid white;
@@ -142,9 +168,16 @@ svg text {
   color: #ffffff;
 }
 
+.section {
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
 .one {
   text-align: center;
-  background: url("./img/frontpage.jpg") center center no-repeat;
+  background: url("../img/frontpage.jpg") center center no-repeat;
   background-size: cover;
 }
 
@@ -154,19 +187,12 @@ svg text {
   justify-content: center;
   align-items: center;
   height: 80%;
-}
-.center-frontpage h1 {
-  font-size: 80px;
+  font-size: 60px;
   color: white;
   text-shadow: 5px 5px 10px #000000;
 }
+
 /***************** ITEMS SECTION *************************/
-.section {
-  color: white;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-}
 
 .two {
   background-image: linear-gradient(
@@ -174,7 +200,7 @@ svg text {
       rgba(0, 0, 0, 0.6),
       rgba(0, 114, 201, 0.3)
     ),
-    url("./img/bg/guitar.jpeg");
+    url("../img/bg/guitar.jpeg");
   background-size: cover;
 }
 
@@ -184,7 +210,7 @@ svg text {
       rgba(0, 0, 0, 0.6),
       rgba(0, 114, 201, 0.3)
     ),
-    url("./img/bg/pedals.jpg");
+    url("../img/bg/pedals.jpg");
   background-size: cover;
 }
 
@@ -244,7 +270,7 @@ svg text {
       rgba(0, 0, 0, 0.6),
       rgba(0, 114, 201, 0.3)
     ),
-    url("./img/bg/contact.jpg");
+    url("../img/bg/contact.jpg");
   background-size: cover;
 }
 
@@ -275,12 +301,15 @@ svg text {
   transition: 0.5s ease;
   color: black;
   overflow: hidden;
+  z-index: 5;
+  position: fixed;
 }
 
 .shopping-cart h3 {
   padding-top: 20px;
   font-size: 50px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .exit-cart {
@@ -295,6 +324,7 @@ svg text {
   top: 0;
   left: 0;
   cursor: pointer;
+  margin: 10px;
 }
 
 .cart-rows {
@@ -313,6 +343,10 @@ svg text {
   margin-right: 1.5em;
   padding-bottom: 10px;
   margin-top: 10px;
+}
+
+.cart-column:nth-last-child(1) {
+  margin-right: 0em;
 }
 
 .cart-item {
@@ -354,10 +388,18 @@ svg text {
   margin-right: 90px;
 }
 
+.button {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .purchase {
   height: 50px;
   width: 150px;
-  margin: 40px auto 80px auto;
   background: rgb(103, 221, 215);
   border: none;
   font-size: 16px;
